@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Spondias</title>   
+</head>
+<body> 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-3"><a href="{% url 'mogadisu_data' %}"><h3>GO TO MOGADISU</h3></a></div>
+                <center><div class="col-md-6"><h1>HYDERABAD EMPLOYEES DATA</h1></div></center>
+                <div class="col-md-3"><a href="{% url 'mubai_data' %}"><h3>GO TO MUMBAI</h3></a></div>
+            </div> 
+        </div>    
+        
+        <br><br>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            {% if Programmers %}
+            
+            <center>
+            
+                <form method="POST">
+                    {% csrf_token %}
+                  <input type="text" name="company" placeholder="Search">
+                  <input class="btn btn-success" type="submit" value="submit">
+                </form>
+              </center>
+
+    <table class="table table-bordered text-center table-hover">
+        <thead class="bg-success">
+            <th>first_name</th>
+            <th>last_nam</th>
+            <th>Salary</th>
+            <th>Email</th>
+            <th>Company</th>
+            <th>Job</th>
+            <th>Location</th>
+            <th>Address</th>
+            
+        </thead>
+
+        {% for programmer in Programmers %}
+        <tr>
+            <td>{{programmer.first_name}}</td>
+            <td>{{programmer.last_name}}</td>
+            <td>{{programmer.salary}}</td>
+            <td>{{programmer.email}}</td>
+            <td>{{programmer.company}}</td>
+            <td>{{programmer.job}}</td>
+            <td>{{programmer.location}}</td>
+            <td>{{programmer.address}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>No Records Found</p>
+
+    {% endif %}
+   
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    
+
+    
+</body>
+</html>

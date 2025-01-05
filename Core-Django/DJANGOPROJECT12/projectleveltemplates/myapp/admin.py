@@ -1,0 +1,13 @@
+from django.contrib import admin
+from connectapp.models import Programmer, SoftwareDeveloper
+
+from myapp.models import Employee, Student, Management, Company, Programmer, SoftwareDevelopers
+
+# Register your models here.
+
+admin.site.register(Employee)
+admin.site.register(Student)
+admin.site.register(Management)
+admin.site.register(Company)
+admin.site.register(Programmer)
+admin.site.register(SoftwareDevelopers)

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>All Programmers Data In Somalia: </h1>
+
+    {% if Programmers %}
+
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Salary</th>
+            <th>Address</th>
+        </thead>
+
+        {% for programmer in Programmers %}
+        <tr>
+            <td>{{programmer.pgno}}</td>
+            <td>{{programmer.pgname}}</td>
+            <td>{{programmer.pgsal}}</td>
+            <td>{{programmer.pgaddr}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% else %}
+    <p>No Records Found</p>
+
+    {% endif %}
+   
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navigation{
+  display: flex;
+  justify-content: space-around;
+  gap: 0.3em;
+  flex-wrap: wrap;
+  list-style: none;
+  max-width: 500px;
+}
+.logo{
+  position: relative;
+  top: -80px;
+  left: 800px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+img{
+  height: 90px;
+  position: relative;
+  top: 10px;
+  left: 50px;
+}
+ .span{
+  font-size: 100px;
+   color: #017143;
+}
+.logo-item{
+  font-size: 80px;
+  position: relative;
+  top: 100px;
+  right: -50px;
+}
+.lorem{
+  position: relative;
+  top: 100px;
+  left: 55px;
+  font-size: 16px;
+  font: verdana;
+  line-height: 1.6;
+}
+.juice{
+  postion: relative;
+  top: -350px;
+  left: 900px;
+  height: 500px;
+}
+.circle{
+  background-color: #017143;
+    height: 1400px;
+  width: auto;
+  border-radius: 50%;
+  position: relative;
+  top: -800px;
+  left: 780px;
+  z-index: -1;
+}
+.btn{
+  background-color: #017143;
+  border-radius: 40px;
+  width: 500px;
+  height: 60px;
+  position: relative;
+  top: -350px;
+  left: 50px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  font-size: bold;
+}
+
+</style>
+<body>
+    <header>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Starbucks_Corporation_Logo_2011.svg/125px-Starbucks_Corporation_Logo_2011.svg.png" >
+        <ul class="navigation">
+          <a href="{% url 'homeurlname' %}"><li class="logo">Home</li></a>
+          <a href="{% url 'tourismurlname' %}"><li class="logo">Toursim</li></a>
+          <a href="{% url 'beachurlname' %}"><li class="logo">Beach</li></a>
+          <a href="{% url 'childrenurlname' %}"><li class="logo">Children</li></a>
+        </ul>
+      </header>
+      <body>
+        <h1 class="logo-item">It's not just Coffee,<br>It's <span class="span">Starbucks</span></h1>
+      <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi praesentium expedita dignissimos officiis<br> exercitationem recusandae officiis assumenda reiciendis qui hic porro, nesciunt consequatur nostrum ipsum <br> molestiae nostrum ipsum quas, veritatis earum dolorem cum.Lorem ipsum dolor sit amet con Nisi praese<br>tetur adipisicing elit. Nisi praesentium expedita dignissimos exercitationem recusandae officiis assumenda<br> reiciendis qui hic porro, nesciunt consequatur molestiae nostrum ipsum quas, veritatis earum dolorem cum <br>nesciunt consequatur molestiae nostrum ipsum quas, veritatis earum dolorem cum.</p>
+        <a href="#" class="btn">learn more</a>
+        <img src="https://freepngimg.com/thumb/starbucks/77325-frappuccino-drink-chocolate-starbucks-matcha-white.png" class="juice">
+        <div class="circle"></div>
+        <div class="square"></div>
+      </body>
+</body>
+</html>

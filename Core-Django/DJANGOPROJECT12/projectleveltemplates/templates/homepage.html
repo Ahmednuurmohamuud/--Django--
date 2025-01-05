@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spondias</title>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spondias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+  <link rel="stylesheet" href="bootstrap/css/fontawesome.5.7.2.css">  
+  <style>
+            .jumbotron{
+            background-color: #133dde;
+            margin: 13%;
+        }
+        #title1{
+            margin-top:-60px;
+        }
+        .cls1{
+            margin-left:5%;
+        }
+        body{
+            background_color:#c2fff5;
+        }
+          </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'home' %}">SPANDIAS</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{% url 'hyderabad_data' %}">Hyderabad</a>
+        <a class="nav-item nav-link" href="{% url 'mubai_data' %}">Mumbai</a>
+        <a class="nav-item nav-link" href="{% url 'somalia_data' %}">Somalia</a>
+        <a class="nav-item nav-link" href="{% url 'mogadisu_data' %}">Mogadisu</a>
+        <a class="nav-item nav-link" href="{% url 'programmerspage' %}">ALL EMPLOYEES</a>
+      </div>
+    </div>
+      <span style="color: white">Hi, Mahesh</span>&nbsp&nbsp
+      <a style="color: white;" href="{% url 'home' %}">LOGOUT</a>
+  </nav>
+
+  <div class="jumbotron text-center"><br>
+    <h1 id="title1" class="text-center">Welcome To Spondias Tech</h1><br>
+    <a href="{% url 'hyderabad_data' %}" class="btn btn-success btn-lg cls1">Hyderabad</a>
+    <a href="{% url 'mubai_data' %}" class="btn btn-primary btn-lg cls1">Mumbai</a>
+    <a href="{% url 'somalia_data' %}" class="btn btn-warning btn-lg cls1">Somalia</a>
+    <a href="{% url 'mogadisu_data' %}" class="btn btn-danger btn-lg cls1">Mogadisu</a>
+    <a href="{% url 'programmerspage' %}" class="btn btn-info btn-lg cls1">ALL EMPLOYEES</a>
+</div>
+
+
+</body>
+</html>
